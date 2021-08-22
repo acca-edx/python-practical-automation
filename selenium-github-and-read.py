@@ -1,6 +1,3 @@
-### Import Selenium and key controls
-# We need the webdriver from selenium to control the course. 
-# Keys are used for imputing into the webpages. 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time 
@@ -40,7 +37,11 @@ driver.close()
 
 ### Finished with the web-browser - it will disappear itself. 
 
+### Load Excel Data Sheet from the fraud detection
 excel_data = pd.read_excel(workDir+'/fraud-detection.xlsx',
                            sheet_name="Survey Data")
 
+### Do some analysis on the data, in this case very basic
+# But try and do some interesting analysis yourself. 
 print(excel_data['Gender'].value_counts())
+
