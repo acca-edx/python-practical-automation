@@ -15,6 +15,7 @@ workDir = r"/tmp"
 ### Set the download directory, so we know where it is going.
 # The following 
 chromeOptions = webdriver.ChromeOptions()
+chromeOptions.add_argument("start-maximized")
 chromeOptions.add_experimental_option(
     "prefs", {"download.default_directory": workDir})
 

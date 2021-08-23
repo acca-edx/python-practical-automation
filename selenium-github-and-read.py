@@ -12,6 +12,7 @@ import pandas as pd
 workDir = r"/tmp"
 
 chromeOptions = webdriver.ChromeOptions()
+chromeOptions.add_argument("start-maximized")
 chromeOptions.add_experimental_option(
     "prefs", {"download.default_directory": workDir})
 driver = webdriver.Chrome(options=chromeOptions)
