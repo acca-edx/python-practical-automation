@@ -15,7 +15,6 @@ workDir = r"/tmp"
 ### Set the download directory, so we know where it is going.
 # The following 
 chromeOptions = webdriver.ChromeOptions()
-chromeOptions.add_argument("start-maximized")
 chromeOptions.add_experimental_option(
     "prefs", {"download.default_directory": workDir})
 
@@ -23,6 +22,8 @@ chromeOptions.add_experimental_option(
 # In this case we are using the Chrome web browser and go to GitHub.
 driver = webdriver.Chrome(options=chromeOptions)
 driver.get("https://github.com")
+driver.fullscreen_window()
+time.sleep(5)
 
 ### Assert checks that we are the right Website by looking for a key word in the title 
 assert "GitHub" in driver.title
